@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\dvr_profile\DvrInstallTool;
+
+/**
+ * Implements hook_install().
+ */
+function dvr_profile_install() {
+  $install = new DvrInstallTool();
+
+  // Set the UUID of this site to be consistent with all installations of this
+  // install profile.
+  $install->setUuid('e3e9e93b-2e47-46e0-a203-3ddb41ee6048');
+
+  // Sync site configuration.
+  $install->doConfigSync();
+}
