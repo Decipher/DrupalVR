@@ -1,2 +1,22 @@
 core: 8.x
 api: 2
+
+
+
+# Defaults
+
+defaults:
+  projects:
+    subdir: contrib
+    type: module
+
+
+
+# Modules
+
+projects:
+
+  devel:
+    download:
+      type: git
+      revision: 38818a6

@@ -18,4 +18,17 @@ function dvr_profile_install() {
 
   // Sync site configuration.
   $install->doConfigSync();
+
+  // Generate some dummy content.
+  /** @var \Drupal\devel_generate\DevelGeneratePluginManager $manager */
+  $manager = \Drupal::service('plugin.manager.develgenerate');
+
+  /** @var \Drupal\devel_generate\DevelGenerateBaseInterface $instance */
+  $instance = $manager->createInstance('content', []);
+
+  $instance->generate([
+    'node_types'   => ['article' => 'article'],
+    'num'          => 10,
+    'title_length' => 10,
+  ]);
 }
