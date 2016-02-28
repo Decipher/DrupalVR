@@ -1,0 +1,25 @@
+uuid: 07fd72ab-98a0-47b9-af3d-61da81b7ac2d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - vrbase
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: vrbase_branding
+theme: vrbase
+region: '-1'
+weight: 6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

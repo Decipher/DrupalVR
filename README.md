@@ -4,6 +4,9 @@ DrupalVR
 This is a demonstration installation profile to showcase Drupal 8 powered
 Virtual Reality.
 
+_**Note:** This is only an early proof of concept and is still under active
+development._
+
 
 
 Installation
@@ -24,4 +27,5 @@ This repository is configured for [Beetbox](http://beetbox.rtfd.org).
 git clone https://github.com/Decipher/DrupalVR.git
 cd DrupalVR
 vagrant up
+open http://drupalvr.local
 ```

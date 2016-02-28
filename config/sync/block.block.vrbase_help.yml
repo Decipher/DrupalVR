@@ -1,0 +1,22 @@
+uuid: 1625c296-f9e7-4e99-8000-e8c0472434d3
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - vrbase
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: vrbase_help
+theme: vrbase
+region: '-1'
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: ef1f506e-be16-44fe-aa3c-609f00c0c0ec
+langcode: en
+status: false
+dependencies:
+  theme:
+    - vrbase
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: vrbase_page_title
+theme: vrbase
+region: '-1'
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
