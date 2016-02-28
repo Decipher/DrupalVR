@@ -28,7 +28,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -208,14 +208,13 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: Block
+    position: 2
     display_options:
       display_extenders: {  }
-      path: gallery
     cache_metadata:
       max-age: 0
       contexts:

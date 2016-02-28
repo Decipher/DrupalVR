@@ -1,0 +1,30 @@
+uuid: c8ac28a3-4d5f-4cf7-b206-6d4f1ddf8e22
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.dvr_gallery
+  module:
+    - system
+    - views
+  theme:
+    - vrbase
+id: dvr_gallery_block
+theme: vrbase
+region: vr
+weight: -8
+provider: null
+plugin: 'views_block:dvr_gallery-block_1'
+settings:
+  id: 'views_block:dvr_gallery-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
