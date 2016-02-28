@@ -1,6 +1,7 @@
 ---
 # Beetbox settings.
 beet_domain: "drupalvr.local"
+beet_site_name: "DrupalVR"
 beet_root: "{{ beet_base }}/docroot"
 beet_mysql_database: "{{ ansible_hostname }}"
 
