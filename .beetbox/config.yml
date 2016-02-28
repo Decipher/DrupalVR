@@ -1,0 +1,13 @@
+---
+# Beetbox settings.
+beet_domain: "drupalvr.local"
+beet_root: "{{ beet_base }}/docroot"
+beet_mysql_database: "{{ ansible_hostname }}"
+
+# Drupal settings.
+drupal_build_makefile: yes
+drupal_distro: dvr_profile
+drupal_distro_makefile: "{{ beet_base }}/drupal-org.make.yml"
+drupal_makefile_path: "{{ beet_base }}/stub.make.yml"
+drupal_install_site: yes
+drupal_install_profile: "{{ drupal_distro }}"

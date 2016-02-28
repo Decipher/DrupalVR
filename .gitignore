@@ -1,0 +1,21 @@
+# Project 3rd party code.
+
+libraries
+modules/*
+!modules/custom
+themes/*
+!themes/custom
+
+
+
+# Vagrant files.
+
+.vagrant
+docroot
+
+
+
+# Miscellaneous files.
+
+.bundle
+.DS_Store
