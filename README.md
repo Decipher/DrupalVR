@@ -29,3 +29,18 @@ cd DrupalVR
 vagrant up
 open http://drupalvr.local
 ```
+
+
+
+Usage
+-----
+
+DrupalVR is best viewed on a mobile device with with a compatible VR headset.
+More on [Entering VR](https://aframe.io/docs/guide/entering-vr.html).
+
+The easiest way to access your local site on a mobile device is via Vagrant
+share:
+
+```
+vagrant share
+```
