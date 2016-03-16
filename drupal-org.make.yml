@@ -16,7 +16,16 @@ defaults:
 
 projects:
 
+  aframe:
+    download:
+      type: git
+      revision: f412785
+
   devel:
     download:
       type: git
       revision: 38818a6
+
+  ds: 2.3
+
+  layout_plugin: 1.0-alpha22

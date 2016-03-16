@@ -1,8 +1,0 @@
-name: VRBase
-type: theme
-base theme: stable
-description: 'A basic theme for VR purposes.'
-version: VERSION
-core: 8.x
-regions:
-  content: Content
