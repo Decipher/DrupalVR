@@ -16,10 +16,7 @@ defaults:
 
 projects:
 
-  aframe:
-    download:
-      type: git
-      revision: f412785
+  aframe: 1.0-beta2
 
   devel:
     download:

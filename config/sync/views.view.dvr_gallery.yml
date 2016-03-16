@@ -3,9 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_image
     - node.type.article
   module:
-    - file
+    - aframe
     - node
     - user
 id: dvr_gallery
@@ -70,11 +71,20 @@ display:
             last: 'Last »'
           quantity: 9
       style:
-        type: default
+        type: aframe
         options:
-          grouping: {  }
           row_class: ''
           default_row_class: false
+          aframe_components:
+            look-at: ''
+            position:
+              x: ''
+              'y': ''
+              z: ''
+            rotation:
+              x: '0'
+              'y': '{{ counter * 36 }}'
+              z: '0'
       row:
         type: fields
         options:
@@ -83,11 +93,61 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        uri:
-          id: uri
-          table: file_managed
-          field: uri
-          relationship: field_image_target_id
+        counter:
+          id: counter
+          table: views
+          field: counter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          counter_start: 0
+          plugin_id: counter
+        field_image:
+          id: field_image
+          table: node__field_image
+          field: field_image
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -126,17 +186,29 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: file_uri
+          click_sort_column: target_id
+          type: aframe_image
           settings:
-            link_to_file: false
-            file_download_path: true
-          group_column: value
+            image_style: large
+            aframe_image_height_ratio: 1
+            aframe_image_width_ratio: 1
+            aframe_image_opacity: 1
+            aframe_components:
+              look-at: ''
+              position:
+                x: '0'
+                'y': '0'
+                z: '-10'
+              rotation:
+                x: '0'
+                'y': '0'
+                z: '0'
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -146,8 +218,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: file
-          entity_field: uri
           plugin_id: field
       filters:
         status:
@@ -187,16 +257,7 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        field_image_target_id:
-          id: field_image_target_id
-          table: node__field_image
-          field: field_image_target_id
-          relationship: none
-          group_type: group
-          admin_label: 'image from field_image'
-          required: true
-          plugin_id: standard
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -207,14 +268,16 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
+      tags:
+        - 'config:field.storage.node.field_image'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
     position: 2
     display_options:
       display_extenders: {  }
+      path: gallery
     cache_metadata:
       max-age: 0
       contexts:
@@ -223,4 +286,5 @@ display:
         - url.query_args
         - 'user.node_grants:view'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.field_image'
