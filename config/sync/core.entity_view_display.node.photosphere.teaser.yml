@@ -1,0 +1,19 @@
+uuid: 1cd0e14f-4393-484f-ba2e-46766e037f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.photosphere.field_image
+    - node.type.photosphere
+  module:
+    - user
+id: node.photosphere.teaser
+targetEntityType: node
+bundle: photosphere
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_image: true

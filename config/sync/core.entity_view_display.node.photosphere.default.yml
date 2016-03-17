@@ -1,0 +1,51 @@
+uuid: afb9a654-6694-4645-9800-f82256cea7c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.photosphere.field_image
+    - node.type.photosphere
+  module:
+    - aframe
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: aframe_ds_scene
+      path: profiles/dvr_profile/modules/contrib/aframe
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+id: node.photosphere.default
+targetEntityType: node
+bundle: photosphere
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      aframe_sky_radius: 5000
+      aframe_sky_segments_height: 64
+      aframe_sky_segments_width: 64
+      aframe_components: {  }
+    third_party_settings: {  }
+    type: aframe_sky
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

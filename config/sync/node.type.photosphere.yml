@@ -1,0 +1,17 @@
+uuid: e0f4c611-6f25-464f-8f00-ca2870314fee
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Photo Sphere'
+type: photosphere
+description: 'Use <em>photo spheres</em> for images created by Google Photo Sphere or using Equirectangular projection.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false
